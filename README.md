@@ -1,6 +1,6 @@
 # useRef playground
 
-This is a simple React application that smaps random squares to DOM. Task provided by bit.lt
+This is a simple React application that spams random squares to DOM. Task provided by bit.lt
 
 ## Description
 
@@ -9,8 +9,9 @@ Every time SQ button is pressed DOM is filled up with random squares. You can un
 ## Features
 
 -  Randomly generate 5-20 squares.
--  Undo generated squares like regular undo comant works.
+-  Undo generated squares like regular undo command works.
 -  Reset DOM.
+-  History disappears after page reload
 
 ## Installation
 
