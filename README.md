@@ -1,16 +1,16 @@
-# My Little Farm
+# useRef playground
 
-This is a simple React application that simulates a pasture divided into two parts: Sheep and Cows. Task provided by bit.lt
+This is a simple React application that smaps random squares to DOM. Task provided by bit.lt
 
 ## Description
 
-When the "To Farm" button is clicked, the pasture is populated with a random number of sheep and cows, each with a unique identification number. Clicking on an animal moves it to the opposite side of the pasture.
+Every time SQ button is pressed DOM is filled up with random squares. You can undo actions by pressing Undo and reset DOM by pressing Rest buttons. Task is to play around with state - useRef.
 
 ## Features
 
--  Randomly generate 5-20 sheep and cows each with unique IDs.
--  Move animals to the opposite side of the pasture by clicking on them.
--  Persist the state of the pasture even after reloading the page.
+-  Randomly generate 5-20 squares.
+-  Undo generated squares like regular undo comant works.
+-  Reset DOM.
 
 ## Installation
 
