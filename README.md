@@ -1,17 +1,18 @@
-# useRef playground
+# useRef/useState playground
 
 This is a simple React application that spams random squares to DOM. Task provided by bit.lt
 
 ## Description
 
-Every time SQ button is pressed DOM is filled up with random squares. You can undo actions by pressing Undo and reset DOM by pressing Rest buttons. Task is to play around with state - useRef.
+Every time SQ button is pressed DOM is filled up with random squares. You can undo actions by pressing Undo and reset DOM by pressing Rest buttons. Task is to play around with states.
+<br> History disappears after page reload. Only squares stays.
 
 ## Features
 
 -  Randomly generate 5-20 squares.
 -  Undo generated squares like regular undo command works.
+-  Jump between created stages with history feature
 -  Reset DOM.
--  History disappears after page reload
 
 ## Installation
 
