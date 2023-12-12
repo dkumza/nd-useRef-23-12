@@ -9,17 +9,23 @@ function rand(min, max) {
    max = Math.floor(max);
    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
 }
+let counter = 0;
 
 function App() {
    const [squares, setSquares] = useState(
       JSON.parse(localStorage.getItem("squares")) || []
    );
 
+   const [history, setHistory] = useState([]);
+
    const historyCounter = useRef([]);
 
    const addSquares = (square) => {
       let howManySq = rand(5, 20);
       historyCounter.current = [...historyCounter.current, howManySq];
+      counter += howManySq;
+      setHistory([...history, counter]);
+      console.log(history);
       let newArray = [];
       for (let i = 0; i < howManySq; i++) {
          newArray.push("");
@@ -39,6 +45,7 @@ function App() {
       historyCounter.current.pop(); //removes last value from array
       newArray = squares.slice(0, -lasHistoryEle);
       setSquares(() => [...newArray]);
+      setHistory(history.slice(0, -1));
       localStorage.setItem("squares", JSON.stringify(newArray));
    };
 
@@ -71,7 +78,12 @@ function App() {
                color="bg-gradient-to-br from-pink-500 to-orange-400"
             />
          </div>
-         <Farm square={squares} historyCounter={historyCounter.current} />
+         <Farm
+            square={squares}
+            setSquares={setSquares}
+            historyCounter={historyCounter.current}
+            history={history}
+         />
       </div>
    );
 }
