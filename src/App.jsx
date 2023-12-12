@@ -39,6 +39,7 @@ function App() {
       historyCounter.current.pop(); //removes last value from array
       newArray = squares.slice(0, -lasHistoryEle);
       setSquares(() => [...newArray]);
+      localStorage.setItem("squares", JSON.stringify(newArray));
    };
 
    const handleReset = () => {

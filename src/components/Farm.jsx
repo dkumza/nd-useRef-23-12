@@ -8,7 +8,10 @@ export const Farm = ({ square, historyCounter }) => {
                <div className="flex flex-wrap gap-2 justify-center items-center">
                   {square.length > 0 &&
                      square.map((sq, index) => (
-                        <div className="w-20 h-20 border " key={index}>
+                        <div
+                           className="w-20 h-20 border border-sky-500 hover:bg-zinc-100"
+                           key={index}
+                        >
                            {sq}
                         </div>
                      ))}
