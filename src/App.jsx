@@ -53,6 +53,7 @@ function App() {
       localStorage.clear("square");
       setSquares([]);
       historyCounter.current = [];
+      setHistory([]);
    };
 
    return (

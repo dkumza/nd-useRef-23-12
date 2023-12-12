@@ -20,7 +20,7 @@ export const Farm = ({ square, setSquares, historyCounter, history }) => {
                   {square.length > 0 &&
                      square.map((sq, index) => (
                         <div
-                           className="w-20 h-20 border border-sky-500 hover:bg-zinc-100"
+                           className="w-8 h-8 border border-sky-500 hover:bg-zinc-100"
                            key={index}
                         >
                            {sq}
@@ -36,16 +36,16 @@ export const Farm = ({ square, setSquares, historyCounter, history }) => {
                   {historyCounter.length > 0 &&
                      history.map((history, index) => (
                         <div
-                           className="cursor-pointer flex gap-2 items-center hover:font-semibold"
+                           className="cursor-pointer flex gap-2 items-center hover:underline"
                            key={index}
-                           value={history}
                            onClick={() => handleHistory(history)}
                         >
-                           Total{" "}
-                           <span className="text-sky-600 text-2xl">
-                              {history}
-                           </span>{" "}
-                           squares
+                           {index + 1}. Added
+                           <span className="text-sky-600 ">
+                              {historyCounter[index]}
+                           </span>
+                           squares. Total -
+                           <span className="text-lime-600">{history}.</span>{" "}
                         </div>
                      ))}
                </div>
